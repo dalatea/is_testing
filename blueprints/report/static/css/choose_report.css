@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    background-color: 
+white;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: 
+rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-item {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: white;
+}
+
+h2 {
+    color:
+black;
+    font-size: 22px;
+}
+
+label {
+    display: block; /* Обеспечивает блочный контекст */
+    color:
+black;
+    font-size: 16px;
+    margin-bottom: 15px; /* Отступ между label и select */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+form > div {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid
+#ccc;
+    width: 100%;
+    background-color:
+white;
+    font-size: 16px;
+    color:
+#333;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.rectangle-button {
+    background-color:
+#007bff;
+    color:
+white;
+    border: none;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.rectangle-button:hover {
+    background-color: 
+#0056b3;
+}

@@ -1,0 +1,88 @@
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* Изменяем направление на столбец */
+    justify-content: center; /* Выравниваем по центру по вертикали */
+    align-items: center; /* Выравниваем по центру по горизонтали */
+    height: 100vh; /* Занимает всю высоту окна */
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Центрируем контейнер по центру страницы */
+    padding: 20px;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.rectangle {
+    background-color:
+#f9f9f9; /* Цвет фона для прямоугольника */
+    padding: 20px; /* Отступы вокруг текста */
+    border: 1px solid
+#ccc; /* Граница */
+    border-radius: 15px; /* Закругление углов */
+
+}
+
+h2 {
+    color:
+#333; /* Цвет текста заголовка */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color:
+#007bff; /* Цвет текста ссылок */
+}
+
+a:hover {
+    background-color: #0056b3; /* Подчеркиваем ссылку при наведении */
+}
+
+.report-button {
+    display: inline-block;
+    background-color:
+#007bff; /* Голубой цвет кнопки */
+    color:
+white; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+header {
+    width: 100%;
+    background-color:
+    rgba(255, 255, 255, 0.9); /* Прозрачность добавлена, 0.8 делает фон на 80% непрозрачным */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-item {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: white;
+}

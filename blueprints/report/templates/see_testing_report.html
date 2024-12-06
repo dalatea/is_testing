@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр отчёта</title>
+    <link rel="stylesheet" href="./static/css/see_report.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Отчёт за {{month}}.{{year}}</h2>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Шифр оборудования</th>
+                    <th>Название</th>
+                    <th>Количество тестирований</th>
+                    <th>Количество неисправностей</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eq in strs %}
+                <tr>
+                    <td>{{eq[0]}}</td>
+                    <td>{{eq[1]}}</td>
+                    <td>{{eq[2]}}</td>
+                    <td>{{eq[3]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+         <br>
+        <a href="/report" class="home-button">Страница отчётов</a>
+    </div>
+</body>
+</html>

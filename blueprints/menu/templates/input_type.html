@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Category</title>
+    <link rel="stylesheet" href="./static/css/equipment.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Ввод параметров запроса:</h2>
+        <form method="POST" action="/client/request">
+            <label for="eq_type">Выберите тип вашего оборудования:</label>
+            <select name="eq_type" id="eq_type" class="styled-select">
+                {% for type in types %}
+                <option value="{{ type }}">{{ type }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Отправить" class="rectangle-button"/>
+        </form>
+    </div>
+</body>
+</html>

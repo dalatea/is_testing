@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{eq_title}}</title>
+    <link rel="stylesheet" href="./static/css/equipment.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>{{eq_title}}</h2>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Наименование</th>
+                    <th>Тип</th>
+                    <th>Производство</th>
+                    <th>Статус</th>
+                    <th>Дата последнего тестирования</th>
+                    <th>Выбрать</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for equipment in equipments %}
+                <tr>
+                    <td>{{equipment[0]}}</td>
+                    <td>{{equipment[1]}}</td>
+                    <td>{{equipment[2]}}</td>
+                    <td>{{equipment[3]}}</td>
+                    <td>{{equipment[4]}}</td>
+                    <td>
+                         <form method="post" action="{{ url_for('query_bp.show_equipment_tests') }}">
+                            <input type="hidden" name="type" value="{{ equipment[1] }}">
+                            <input type="submit" value="Выбрать">
+                         </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+
+        <form method="post" action="{{ url_for('query_bp.show_equipment') }}">
+            <label for="type-select">Выберите тип оборудования:</label>
+            <select id="type-select" name="type">
+                <option value="">все</option>
+                {% for type in types %}
+                    <option value="{{ type|safe }}">{{ type|safe }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Отфильтровать</button>
+        </form>
+    </div>
+</body>
+</html>

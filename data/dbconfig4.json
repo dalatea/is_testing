@@ -1,0 +1,6 @@
+{
+  "host": "127.0.0.1",
+  "user": "external_user",
+  "password" : "7382392",
+  "database": "equipment"
+}

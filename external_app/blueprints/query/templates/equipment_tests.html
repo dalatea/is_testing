@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ eq_title }}</title>
+    <link rel="stylesheet" href="./static/css/equipment.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>{{ eq_title }}</h2>
+        <form method="POST" action="/testing/begin">
+            <table>
+                <thead>
+                    <tr class="header">
+                        <th>ID теста</th>
+                        <th>Название</th>
+                        <th>Выбрать</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for test in tests %}
+                    <tr>
+                        <td>{{ test[0] }}</td>
+                        <td>{{ test[1] }}</td>
+                        <td><input type="checkbox" name="selected_tests" value="{{ test[0] }}"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit">Начать тестирование</button>
+        </form>
+    </div>
+</body>
+</html>

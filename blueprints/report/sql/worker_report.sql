@@ -1,0 +1,1 @@
+CALL `equipment`.create_worker_report($month, $year)

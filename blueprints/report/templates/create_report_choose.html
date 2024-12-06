@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose_report</title>
+    <link rel="stylesheet" href="./static/css/choose_report.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Выберите период отчёта и его тип:</h2>
+        <form method="POST" action="">
+            <div>
+                <label for="reports">Тип:</label>
+                <select name="reports" id="reports" class="styled-select">
+                    {% for report in reports %}
+                    <option value="{{ report.rep_id }}">{{ report.rep_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <label for="months">Месяц:</label>
+                <select name="months" id="months" class="styled-select">
+                    {% for month in months %}
+                    <option value="{{ month }}">{{ month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <label for="years">Год:</label>
+                <select name="years" id="years" class="styled-select">
+                    {% for year in years %}
+                    <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <input type="submit" value="Создать" class="rectangle-button"/>
+        </form>
+    </div>
+</body>
+</html>

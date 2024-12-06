@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+*.env
+
+# IDE-specific files (PyCharm)
+.idea/
+
+# Compiled files
+*.class
+*.o
+*.ko
+*.obj
+*.dll
+*.exe
+*.out
+*.so
+*.pyd
+*.dist-info
+
+# Log files
+*.log
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+.cache/
+.cache

@@ -1,0 +1,1 @@
+CALL `equipment`.create_testing_report($month, $year)

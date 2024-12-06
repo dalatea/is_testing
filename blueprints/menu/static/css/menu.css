@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color:
+#333;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-item {
+    color:
+white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-item:hover {
+    background-color:
+#555;
+}
+
+/* Основной контент будет занимать оставшуюся часть экрана */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center;   /* Вертикальное выравнивание */
+    text-align: center; /* Дополнительно, чтобы текст внутри блоков был в центре */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.container a {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color:
+#007bff;
+    color:
+white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+}
+
+.container a:hover {
+    background-color:
+#0056b3;
+}
