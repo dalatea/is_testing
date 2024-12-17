@@ -1,0 +1,1 @@
+INSERT INTO `protocol_test` (`tp_id`, `test_id`) VALUES ($e_protocol_id, $e_test_id);

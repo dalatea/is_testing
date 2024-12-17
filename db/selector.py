@@ -6,8 +6,10 @@ def select_list(db_config: dict, _sql: str):
         if cursor is None:
             raise ValueError("Cursor not created")
         else:
+            print(_sql)
             cursor.execute(_sql)
             result = cursor.fetchall()
+            print(result)
 
             schema = [item[0] for item in cursor.description]
             print(result)

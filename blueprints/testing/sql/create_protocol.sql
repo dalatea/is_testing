@@ -1,0 +1,1 @@
+INSERT INTO `testing_protocol` (`t_date`, `w_id`, `eu_id`) VALUES ('$e_order_date', $e_user_id, $e_eq_id);

@@ -15,7 +15,7 @@ provider = SQLProvider(
         os.path.dirname(__file__),
         'sql')
 )
-
+'''
 @query_blueprint.route('/all_equipment', methods=['GET', 'POST'])
 @group_required
 def show_equipment():
@@ -53,7 +53,7 @@ def show_equipment_tests():
         return render_template("equipment_tests.html", title=eq_title, tests=res_info.result)
     else:
         return "No result"
-
+'''
 '''
 @query_blueprint.route('/eq_category', methods=['GET'])
 @group_required

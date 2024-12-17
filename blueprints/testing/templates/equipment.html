@@ -20,24 +20,25 @@
                 <tr class="header">
                     <th>Наименование</th>
                     <th>Тип</th>
-                    <th>Производство</th>
                     <th>Статус</th>
                     <th>Дата последнего тестирования</th>
+                    <th>Рекомендуемая периодичность тестирований (в месяцах)</th>
                     <th>Выбрать</th>
                 </tr>
             </thead>
             <tbody>
                 {% for equipment in equipments %}
                 <tr>
-                    <td>{{equipment[0]}}</td>
                     <td>{{equipment[1]}}</td>
                     <td>{{equipment[2]}}</td>
                     <td>{{equipment[3]}}</td>
                     <td>{{equipment[4]}}</td>
+                    <td>{{equipment[5]}}</td>
                     <td>
-                         <form method="post" action="{{ url_for('query_bp.show_equipment_tests') }}">
-                            <input type="hidden" name="type" value="{{ equipment[1] }}">
-                            <input type="submit" value="Выбрать">
+                         <form method="post" action="{{ url_for('testing_bp.show_equipment_tests') }}">
+                             <input type="hidden" name="eu_id" value="{{ equipment[0] }}">
+                             <input type="hidden" name="type" value="{{ equipment[2] }}">
+                             <input type="submit" value="Выбрать">
                          </form>
                     </td>
                 </tr>
@@ -46,7 +47,7 @@
         </table>
         <br>
 
-        <form method="post" action="{{ url_for('query_bp.show_equipment') }}">
+        <form method="post" action="{{ url_for('testing_bp.show_equipment') }}">
             <label for="type-select">Выберите тип оборудования:</label>
             <select id="type-select" name="type">
                 <option value="">все</option>

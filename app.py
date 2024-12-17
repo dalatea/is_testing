@@ -19,8 +19,6 @@ app.register_blueprint(auth_blueprint, url_prefix='/auth')
 app.register_blueprint(report_blueprint, url_prefix='/report')
 app.register_blueprint(menu_blueprint, url_prefix='/')
 app.register_blueprint(testing_blueprint, url_prefix='/testing')
-#app.register_blueprint(create_report_blueprint, url_prefix='/create_report')
-#app.register_blueprint(client_blueprint , url_prefix='/client')
 
 @app.route('/logout')
 def exit_func():

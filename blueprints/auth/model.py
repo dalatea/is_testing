@@ -12,9 +12,10 @@ class ProductInfoRespronse:
     status: bool
 
 config_path = {
-    'director': "./data/dbconfig.json",
-    'analyst': "./data/dbconfig.json",
-    None: "./data/dbconfig4.json"
+    'director': "./data/dbconfig_director.json",
+    'analyst': "./data/dbconfig_report.json",
+    'manager': "./data/dbconfig_manager.json",
+    None: "./data/dbconfig_testing.json"
 }
 def search_user(db_config, sql_provider, login, password):
     _sql = sql_provider.get('login.sql', login=login)

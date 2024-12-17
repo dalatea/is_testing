@@ -9,7 +9,7 @@ class ProductInfoResponse:
 
 
 def get_years(db_config, provider):
-    result = select_dict(db_config, f"SELECT DISTINCT YEAR(t_date) FROM testing_protocol ORDER BY YEAR(t_date) DESC;;")
+    result = select_dict(db_config, f"SELECT DISTINCT YEAR(t_date) FROM `equipment`.testing_protocol ORDER BY YEAR(t_date) DESC;")
     year_list = [f"{list(item.values())[0]}" for item in result]
 
     return year_list

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{eq_title}}</title>
+    <link rel="stylesheet" href="./static/css/equipment.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-item home-button">На главную</a>
+            <a href="/logout" class="navbar-item logout-button">Выход</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>{{title}}</h2>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Название теста</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in tests %}
+                <tr>
+                    <td>{{item[1]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+    </div>
+</body>
+</html>
